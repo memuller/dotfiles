@@ -1,1 +1,26 @@
+# vim
 *.swp
+
+# C9 IDE
+*.c9
+*.c9revisions
+
+# Dropbox
+.dropbox
+
+# Unix
+*~
+.Trash-*
+.nfs*
+.directory
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# OSX
+*.DS_Store
+.AppleDouble
+.LSOverride
+._*
