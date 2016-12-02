@@ -14,3 +14,5 @@
 #F11::Send {Volume_Down}
 #F12::Send {Volume_Up}
 #F10::Send {Volume_Mute}
+
+#F3::Send {LWinDown}{Tab}
