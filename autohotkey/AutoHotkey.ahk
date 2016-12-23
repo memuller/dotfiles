@@ -16,3 +16,7 @@
 #F10::Send {Volume_Mute}
 
 #F3::Send {LWinDown}{Tab}
+
+;; Apps key (context menu)
+Capslock::AppsKey
++Capslock::Capslock
