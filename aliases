@@ -54,8 +54,13 @@ if [ `uname -o` = 'Cygwin' ]; then
   alias cde="cd /cygdrive/e"
 
   # for windows ruby support
-  alias gem='C:/Ruby23-x64/bin/gem'
-  export homeFolder='C:/Users/memuller'
+  export homeFolder="C:/Users/memuller"
+fi
+
+# Linux-specific
+if [ `uname -o` = 'GNU/Linux' ]; then
+  # pipes sound line input to output w/ gstreamer/pulse
+  alias listen='gst-launch-1.0 pulsesrc ! pulsesink'
 fi
 
 if [ -d "$HOME/Repos/danbooru-ruby-grabber" ]; then
