@@ -12,3 +12,12 @@ function s() {
 function trim() {
   sed "s/[[:space:]]//g"
 }
+
+# Sets permissions, recursively, on a given path.
+# first arg is path, second arg is the permission set for folders,
+# third arg is the permission set for files.
+# $ perms . 755 644
+function perms(){
+  find $1 -type d -exec chmod $2 {} \;
+  find $1 -type f -exec chmod $3 {} \;
+}
