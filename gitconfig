@@ -42,10 +42,12 @@
 [alias]
   last = log -1 --stat
   unstage = reset HEAD --
+	undo = reset HEAD~1
   dc = diff --cached
   a = add
   aa = add --all
-  st = status -sb
+	st = status
+  s = status -sb
   cl = clone
   ci = commit
   cia = commit -a
