@@ -61,6 +61,8 @@ fi
 if [ `uname -o` = 'GNU/Linux' ]; then
   # pipes sound line input to output w/ gstreamer/pulse
   alias listen='gst-launch-1.0 pulsesrc ! pulsesink'
+  # gets distro name
+  alias distro="lsb_release -i | sed 's/Distributor ID://' | sed 's/[[:space:]]//g'"
 fi
 
 if [ -d "$HOME/Repos/danbooru-ruby-grabber" ]; then
