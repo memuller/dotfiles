@@ -1,0 +1,7 @@
+*		text=auto
+*.ahk		text eol=crlf
+ConEmu.xml	text eol=crlf
+
+*.sh		text eol=lf
+*.zsh		text eol=lf
+
