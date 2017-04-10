@@ -4,7 +4,25 @@
 # First arg is the command, second is the service name (w/o .service)
 # $ service start mongodb
 function s() {
-  sudo systemctl $1 $2.service
+  case $1 in
+    e)
+      cmd="enable";;
+    d)
+      cmd="disable";;
+    s)
+      cmd="start";;
+    p)
+      cmd="stop";;
+    r)
+      cmd="restart";;
+    l)
+      cmd="reload";;
+    t)
+      cmd="status";;
+    *)
+      cmd=$1
+  esac
+  sudo systemctl $cmd $2.service
 }
 
 # Removes spaces on given input
