@@ -4,10 +4,11 @@
 
 [core]
   pager = less -FRSX
-	excludesfile = /Users/memuller/.gitignore
+	excludesfile = ~/.gitignore
 	trustctime = false
   editor = vim
   filemode = false
+	autocrlf = input
 
 [color]
   ui = true
