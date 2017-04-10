@@ -1,7 +1,7 @@
 ;; Mouse Wheel Scroll Emulation
 ; MouseWheelEmulator.ahk created by Blahman (blah238 at gmail dot com)
 ; v1.0, 10/18/2009
-#Include %A_ScriptDir%\MouseWheelEmulator.ahk
+;;#Include %A_ScriptDir%\MouseWheelEmulator.ahk
 
 
 ;; Virtual Media Keys
@@ -20,3 +20,18 @@
 ;; Apps key (context menu)
 Capslock::AppsKey
 +Capslock::Capslock
+
+XButton2::WheelUp
+XButton1::WheelDown
+
+#F13:: Send {PrintScreen}
+
+#c::
+{
+Send, ^c
+Sleep 50
+Run, http://www.google.com/search?q=%clipboard%
+Return
+}
+
+#Capslock::  Winset, Alwaysontop, , A
