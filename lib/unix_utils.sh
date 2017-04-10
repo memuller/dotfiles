@@ -18,6 +18,10 @@ function trim() {
 # third arg is the permission set for files.
 # $ perms . 755 644
 function perms(){
+  if [[ ! $# -eq 3 ]]; then
+    echo "Call with three parameters (path, folderPermission, filePermissions)"
+    return 1
+  fi
   find $1 -type d -exec chmod $2 {} \;
   find $1 -type f -exec chmod $3 {} \;
 }
