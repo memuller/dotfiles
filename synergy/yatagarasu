@@ -1,0 +1,39 @@
+section: screens
+	yatagarasu:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+	intelbras:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+end
+
+section: aliases
+	intelbras:
+		lintelbras
+end
+
+section: links
+	yatagarasu:
+		right = intelbras
+	intelbras:
+		left = yatagarasu
+end
+
+section: options
+	relativeMouseMoves = false
+	screenSaverSync = false
+	win32KeepForeground = false
+	switchCorners = none 
+	switchCornerSize = 0
+	keystroke(Control+Alt+Right) = switchToScreen(intelbras)
+	keystroke(Control+Alt+Left) = switchToScreen(yatagarasu)
+end
+
