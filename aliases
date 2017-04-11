@@ -65,6 +65,9 @@ if [ `uname -o` = 'GNU/Linux' ]; then
   alias distro="lsb_release -i | sed 's/Distributor ID://' | sed 's/[[:space:]]//g'"
 fi
 
+# some useful commands
+source ~/Repos/dotfiles/lib/unix_utils.sh
+
 if [ -d "$HOME/Repos/danbooru-ruby-grabber" ]; then
   source ~/Repos/danbooru-ruby-grabber/aliases
 fi
