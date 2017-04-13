@@ -78,5 +78,10 @@ alias be='bundle exec'
 # git
 alias g='git'
 
+#python
+alias py='python'
+alias py2='python2'
+alias py3='python3'
+
 # composer
 alias composer="php $HOME/.composer/composer.phar"
