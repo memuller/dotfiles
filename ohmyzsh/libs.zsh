@@ -20,3 +20,8 @@ if [ -f "$HOME/.bin/git-prompt.sh" ]; then
   source ~/.bin/git-completion.bash
   source ~/.bin/git-prompt.sh
 fi
+
+# RVM
+if [ -d "$HOME/.rvm" ]; then
+  export PATH="$PATH:$HOME/.rvm/bin"
+fi
