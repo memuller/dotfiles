@@ -25,3 +25,7 @@ fi
 if [ -d "$HOME/.rvm" ]; then
   export PATH="$PATH:$HOME/.rvm/bin"
 fi
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
