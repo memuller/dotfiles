@@ -22,9 +22,9 @@ end
 
 section: links
 	yatagarasu:
-		right = intelbras
+		left = intelbras
 	intelbras:
-		left = yatagarasu
+		right = yatagarasu
 end
 
 section: options
@@ -33,7 +33,7 @@ section: options
 	win32KeepForeground = false
 	switchCorners = none 
 	switchCornerSize = 0
-	keystroke(Control+Alt+Right) = switchToScreen(intelbras)
-	keystroke(Control+Alt+Left) = switchToScreen(yatagarasu)
+	keystroke(Control+Alt+Left) = switchToScreen(intelbras)
+	keystroke(Control+Alt+Right) = switchToScreen(yatagarasu)
 end
 
