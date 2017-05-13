@@ -24,4 +24,5 @@
 ## <Continue to add your own>
 
 function e. { explorer . }
+function env { ls variable:* }
 New-Alias g git
