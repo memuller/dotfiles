@@ -28,9 +28,11 @@ fi
 
 # Windows-specific
 if [ `uname -o` = 'Cygwin' ]; then
-	alias cdc="cd /cygdrive/c"
-	alias cdd="cd /cygdrive/d"
-  alias cde="cd /cygdrive/e"
+	alias c:="cd /cygdrive/c"
+	alias d:="cd /cygdrive/d"
+  alias e:="cd /cygdrive/e"
+  alias x:="cd /cygdrive/x"
+  alias z:="cd /cygdrive/z"
 
   # for windows ruby support
   export homeFolder="C:/Users/memuller"
