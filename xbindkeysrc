@@ -1,0 +1,5 @@
+"xdotool click --repeat 2 4"
+release + b:9
+
+"xdotool click --repeat 2 5"
+release + b:8
