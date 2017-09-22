@@ -2,14 +2,12 @@
 export ZSH=/home/memuller/.oh-my-zsh
 
 ZSH_THEME="refined"
-
-#ZSH_THEME="bullet-train"
+ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   status
   context
   dir
   nvm
-  ruby
   git
 )
 BULLETTRAIN_CONTEXT_DEFAULT_USER="memuller"

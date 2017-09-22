@@ -8,17 +8,25 @@ fi
 # WP-CLI directory
 PATH=$HOME/.wp-cli/bin:$PATH
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# some more ls aliases; or exa (if installed)
+which exa >/dev/null 2>/dev/null
+if [ $? = 1 ]; then
+  alias ll='ls -alF'
+  alias la='ls -A'
+  alias l='ls'
+else
+  alias ll='exa -l --git'
+  alias la='exa -a'
+  alias lf='exa -bgHliS'
+  alias l='ll'
+fi
 
 #sudo preserves path
 #alias sudo="sudo env PATH=$PATH"
 
 #cl : cd with a ls
 function cl () {
-  cd $1 && ls
+  cd $1 && l
 }
 
 # OSX-specific
@@ -63,6 +71,3 @@ alias g='git'
 alias py='python'
 alias py2='python2'
 alias py3='python3'
-
-# composer
-alias composer="php $HOME/.composer/composer.phar"
