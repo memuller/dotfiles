@@ -55,10 +55,10 @@ if [ `uname -o` = 'GNU/Linux' ]; then
 fi
 
 # some useful commands
-source ~/Repos/dotfiles/lib/unix_utils.sh
+source ~/Repos/env/dotfiles/lib/unix_utils.sh
 
-if [ -d "$HOME/Repos/danbooru-ruby-grabber" ]; then
-  source ~/Repos/danbooru-ruby-grabber/aliases
+if [ -d "$HOME/Repos/ruby/danbooru-ruby-grabber" ]; then
+  source ~/Repos/ruby/danbooru-ruby-grabber/aliases
 fi
 
 # ruby is fun
