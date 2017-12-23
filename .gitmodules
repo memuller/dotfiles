@@ -1,3 +1,6 @@
 [submodule "atom"]
 	path = atom
 	url = git@github.com:memuller/atom.config.git
+[submodule "ohmyzsh/plugins/zsh-syntax-highlighting"]
+	path = ohmyzsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
