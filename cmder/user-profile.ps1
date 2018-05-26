@@ -26,6 +26,7 @@
 function e. { explorer . }
 function env { ls variable:* }
 New-Alias g git
+New-Alias dc docker-compose
 
 # Docker Composer path fix for Windows, see
 # https://github.com/docker/compose/issues/4240

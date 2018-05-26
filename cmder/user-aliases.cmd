@@ -14,3 +14,5 @@ unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
 g=git $*
+b=bash -c $*
+dc=docker-compose $*
