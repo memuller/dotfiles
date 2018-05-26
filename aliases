@@ -91,6 +91,10 @@ if [ -d "$HOME/Repos/ruby/danbooru-ruby-grabber" ]; then
   source ~/Repos/ruby/danbooru-ruby-grabber/aliases
 fi
 
+if [ -d "$HOME/Repos/env/vubuntu" ]; then
+  source ~/Repos/env/vubuntu/vubuntu.sh
+fi
+
 # ruby is fun
 alias be='bundle exec'
 
