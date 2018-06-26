@@ -6,7 +6,7 @@
 # if service is ommited or 'last' or 'l', will reuse service in previous call
 # $ s start mongodb
 # $ s restart
-# $ s t 
+# $ s t
 function s() {
   if [ $# -lt 2 ] || [ $2 = "l" ] || [ $2 = "last" ] ; then
       srvc=$LAST_SERVICE
@@ -40,6 +40,12 @@ function s() {
 # $ echo "    those spaces will be gone  " | trim
 function trim() {
   sed "s/[[:space:]]//g"
+}
+
+# Removes comments on given input
+# $ echo "/* will echo nothing */"
+function stripComments() {
+  sed -e 's/^\/\*![0-9]\{5\}.*\/;$//g'
 }
 
 # Sets permissions, recursively, on a given path.
