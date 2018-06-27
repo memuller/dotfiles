@@ -58,7 +58,7 @@ fi
 source ~/Repos/env/dotfiles/lib/unix_utils.sh
 
 # Windows WSL-specific
-if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` = 'Microsoft' ]; then
+if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` ]; then
   export WSL=1
 
   # when a command is not found, tries to find an executable with the same name and run it
