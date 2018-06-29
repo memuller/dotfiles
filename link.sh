@@ -13,5 +13,8 @@ ln -s $(pwd)/xsendkeysrc ~/.xsendkeysrc
 
 if [ uname --all | grep -E '(Ubuntu|Fedora|Mint)' ]; then
   rm -r ~/.local/share/applications
-  ln -s $(pwd)/local/share/applications ~/.local/share/applications
+  ln -s $(pwd)/gnome/local/share/applications ~/.local/share/applications
+
+  rm -r ~/.config/autostart
+  ln -s $(pwd)/gnome/config/autostart ~/.config/autostart
 fi
