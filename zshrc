@@ -60,10 +60,10 @@ source $ZSH/oh-my-zsh.sh
 
 # export LANG=en_US.UTF-8
 
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='code'
+fi
 
 # export ARCHFLAGS="-arch x86_64"

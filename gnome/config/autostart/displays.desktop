@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Configure Secondary Display
+Exec=/home/memuller/Repos/env/dotfiles/lib/display.sh
+Icon=display
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;System;Utility;TerminalEmulator;
