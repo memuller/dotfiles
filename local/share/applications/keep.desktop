@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Google Keep
+Exec=/home/memuller/Repos/tools/keep/dist/Keep-linux-x64/Keep
+Icon=/home/memuller/Repos/tools/keep/dist/Keep-linux-x64/resources/app/assets/icon.png
