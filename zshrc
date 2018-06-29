@@ -1,22 +1,38 @@
 
 export ZSH=/home/memuller/.oh-my-zsh
 
-ZSH_THEME="refined"
-ZSH_THEME="bullet-train"
+# default
+# ZSH_THEME="robbyrussel"
+
+#ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   status
   context
   dir
-  nvm
   git
 )
 BULLETTRAIN_CONTEXT_DEFAULT_USER="memuller"
 BULLETTRAIN_STATUS_EXIT_SHOW=true
-
 DEFAULT_USER=memuller
 
+ZSH_THEME=spaceship
+
 # ls ~/.oh-my-zsh/plugins to see available plugins
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  autoenv
+  pj
+  autojump
+  zsh-syntax-highlighting
+)
+
+# PJ project paths
+PROJECT_PATHS=(
+  ~/Repos/env
+  ~/Repos/wp
+  ~/Repos/node
+)
 
 # CASE_SENSITIVE="true"
 
@@ -36,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # ZSH_CUSTOM=/path/to/new-custom-folder
 #
