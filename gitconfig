@@ -41,7 +41,6 @@
 	required = true
 
 [alias]
-  last = log -1 --stat
   unstage = reset HEAD --
 	undo = reset HEAD~1
   dc = diff --cached
@@ -66,7 +65,9 @@
   psa = push --all
   df = diff
   lg = log --pretty=oneline
-  lgg = lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+  ll = log --stat
+  lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+  last = log -1 --stat
   sa = stash apply
   ss = stash
   sc = stash create
