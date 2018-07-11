@@ -60,3 +60,7 @@ function perms(){
   find $1 -type d -exec chmod $2 {} \;
   find $1 -type f -exec chmod $3 {} \;
 }
+
+function fixEndings() {
+  awk 'BEGIN{RS="^$";ORS="";getline;gsub("\r","");print>ARGV[1]}' $1
+}
