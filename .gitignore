@@ -1,2 +1,15 @@
 /cmder/.history
 /deluge
+
+.cache
+
+# gnome regular shortcuts
+*.desktop
+!MusicBee.desktop
+!keep.desktop
+!chrome-todoist.desktop
+
+# gnome autostart shortcuts
+!tilda.desktop
+!displays.desktop
+!xbindkeys.desktop
