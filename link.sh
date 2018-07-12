@@ -18,3 +18,8 @@ if [ uname --all | grep -E '(Ubuntu|Fedora|Mint)' ]; then
   rm -r ~/.config/autostart
   ln -s $(pwd)/gnome/config/autostart ~/.config/autostart
 fi
+
+if [ -d "$HOME/.nvm" ]; then
+  ln -s $(pwd)/nvm.default-packages ~/.nvm/default-packages
+fi
+

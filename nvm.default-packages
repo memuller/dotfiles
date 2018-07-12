@@ -1,0 +1,11 @@
+standard
+eslint
+electron 
+gulp-cli 
+@angular/cli 
+node-sass  
+vue-cli 
+flow-bin
+jake
+parcel-bundler
+webpack-cli
