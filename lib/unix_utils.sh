@@ -63,6 +63,11 @@ function perms(){
 
 # Lists directories.
 function dirs() {
-  array = ls -l | egrep '^d' | awk '{print $9}'
+  array= ls -l | egrep '^d' | awk '{print $9}'
   return array
+}
+
+# Removes CR (Windows line endings).
+function fixEndings() {
+  awk 'BEGIN{RS="^$";ORS="";getline;gsub("\r","");print>ARGV[1]}' $1
 }
