@@ -23,3 +23,5 @@ if [ -d "$HOME/.nvm" ]; then
   ln -s $(pwd)/nvm.default-packages ~/.nvm/default-packages
 fi
 
+ln -s $(pwd)/python.env ~/Repos/python/.env
+
