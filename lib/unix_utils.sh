@@ -60,3 +60,9 @@ function perms(){
   find $1 -type d -exec chmod $2 {} \;
   find $1 -type f -exec chmod $3 {} \;
 }
+
+# Lists directories.
+function dirs() {
+  array = ls -l | egrep '^d' | awk '{print $9}'
+  return array
+}
