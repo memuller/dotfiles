@@ -1,10 +1,12 @@
 
 export ZSH=/home/memuller/.oh-my-zsh
 
-# default
 # ZSH_THEME="robbyrussel"
+# ZSH_THEME="refined"
+# ZSH_THEME="lambda-mod"
+# ZSH_THEME="bullet-train"
+ZSH_THEME=spaceship
 
-#ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   status
   context
@@ -15,7 +17,7 @@ BULLETTRAIN_CONTEXT_DEFAULT_USER="memuller"
 BULLETTRAIN_STATUS_EXIT_SHOW=true
 DEFAULT_USER=memuller
 
-ZSH_THEME=spaceship
+
 
 # ls ~/.oh-my-zsh/plugins to see available plugins
 plugins=(
