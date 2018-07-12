@@ -52,6 +52,8 @@ if [ `uname -o` = 'GNU/Linux' ]; then
   alias listen='gst-launch-1.0 pulsesrc ! pulsesink'
   # gets distro name
   alias distro="lsb_release -i | sed 's/Distributor ID://' | sed 's/[[:space:]]//g'"
+  # loads audio loopback pulseaudio module
+  pactl load-module module-loopback
 fi
 
 # some useful commands
