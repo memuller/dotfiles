@@ -54,6 +54,10 @@ if [ `uname -o` = 'GNU/Linux' ]; then
   alias distro="lsb_release -i | sed 's/Distributor ID://' | sed 's/[[:space:]]//g'"
   # loads audio loopback pulseaudio module
   pactl load-module module-loopback
+
+  # clipboard management
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
 fi
 
 # some useful commands
