@@ -1,7 +1,7 @@
 /cmder/.history
 /deluge
 
-.cache
+*.cache
 
 # gnome regular shortcuts
 *.desktop
