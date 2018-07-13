@@ -31,3 +31,8 @@ if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
+
+# Rust and Cargo
+if [ -d "$HOME/.cargo" ]; then
+  export PATH="$PATH:$HOME/.cargo/bin"
+fi
