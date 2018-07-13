@@ -61,6 +61,13 @@ function perms(){
   find $1 -type f -exec chmod $3 {} \;
 }
 
+# Lists directories.
+function dirs() {
+  array= ls -l | egrep '^d' | awk '{print $9}'
+  return array
+}
+
+# Removes CR (Windows line endings).
 function fixEndings() {
   awk 'BEGIN{RS="^$";ORS="";getline;gsub("\r","");print>ARGV[1]}' $1
 }

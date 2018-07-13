@@ -13,6 +13,13 @@ section: screens
 		xtestIsXineramaUnaware = false
 		switchCorners = none 
 		switchCornerSize = 0
+  duo:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
 end
 
 section: aliases
@@ -23,8 +30,11 @@ end
 section: links
 	yatagarasu:
 		left = intelbras
+    down = duo
 	intelbras:
 		right = yatagarasu
+  duo:
+    up = yatagarasu
 end
 
 section: options
@@ -33,7 +43,8 @@ section: options
 	win32KeepForeground = false
 	switchCorners = none 
 	switchCornerSize = 0
-	keystroke(Control+Alt+Left) = switchToScreen(intelbras)
-	keystroke(Control+Alt+Right) = switchToScreen(yatagarasu)
+	keystroke(Super+F10) = switchToScreen(yatagarasu)
+  keystroke(Super+F11) = switchToScreen(intelbras)
+  keystroke(Super+F12) = switchToScreen(duo)
 end
 

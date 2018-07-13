@@ -39,9 +39,9 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+  process = git-lfs filter-process
 
 [alias]
-  last = log -1 --stat
   unstage = reset HEAD --
 	undo = reset HEAD~1
   dc = diff --cached
@@ -61,12 +61,15 @@
   br = branch
   bra = branch -a
   pl = pull
+  plm = pull origin master
   ps = push
   psm = push origin master
   psa = push --all
   df = diff
   lg = log --pretty=oneline
-  lgg = lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+  ll = log --stat
+  lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+  last = log -1 --stat
   sa = stash apply
   ss = stash
   sc = stash create
@@ -81,3 +84,4 @@
   hero = push heroku heroku:master
   shift = push openshift openshift:master
   theirs = merge --strategy-option theirs
+  ours = merge --strategy-option ours

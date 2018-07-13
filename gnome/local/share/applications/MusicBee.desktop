@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=MusicBee
+Exec=wine '/home/memuller/.wine/drive_c/Program Files/MusicBee/MusicBee.exe'
+Icon=rhythmbox
+Terminal=false
+Type=Application
+Categories=Music;Wine
