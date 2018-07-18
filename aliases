@@ -29,6 +29,11 @@ function cl () {
   cd $1 && l
 }
 
+# Are we on Windows WSL?
+if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` ]; then
+  export WSL=1
+fi
+
 # OSX-specific
 if [ `uname` = 'Darwin' ]; then
   alias wget="curl -O"
@@ -47,7 +52,7 @@ if [ `uname -o` = 'Cygwin' ]; then
 fi
 
 # Linux-specific
-if [ `uname -o` = 'GNU/Linux' ]; then
+if [ -z ${WSL} ] && [ `uname -o` = 'GNU/Linux' ]; then
   # pipes sound line input to output w/ gstreamer/pulse
   alias listen='gst-launch-1.0 pulsesrc ! pulsesink'
   # gets distro name
@@ -64,9 +69,7 @@ fi
 source ~/Repos/env/dotfiles/lib/unix_utils.sh
 
 # Windows WSL-specific
-if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` ]; then
-  export WSL=1
-
+if [ $WSL ]; then
   # when a command is not found, tries to find an executable with the same name and run it
   command_not_found_handle() {
     if cmd.exe /c "(where $1 || (help $1 |findstr /V Try)) >nul 2>nul && ($* || exit 0)"; then
