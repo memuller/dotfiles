@@ -34,5 +34,5 @@ fi
 
 # Rust and Cargo
 if [ -d "$HOME/.cargo" ]; then
-  source $HOME/.cargo/env
+  export PATH="$PATH:$HOME/.cargo/bin"
 fi
