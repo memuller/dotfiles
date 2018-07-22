@@ -6,6 +6,7 @@
 # gnome regular shortcuts
 *.desktop
 !MusicBee.desktop
+!ChromiumDebug.desktop
 !keep.desktop
 !chrome-todoist.desktop
 
