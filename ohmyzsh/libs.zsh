@@ -32,6 +32,16 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
 
+# Composer
+if [ -d "$HOME/.config/composer" ]; then
+  export COMPOSER_HOME="$HOME/.config/composer"
+elif [ -d "$HOME/.composer" ]; then
+  export COMPOSER_HOME="$HOME/.composer"
+fi
+if [ -n ${COMPOSER_HOME} ]; then
+  export PATH="$PATH:$COMPOSER_HOME/vendor/bin"
+fi
+
 # Rust and Cargo
 if [ -d "$HOME/.cargo" ]; then
   export PATH="$PATH:$HOME/.cargo/bin"
