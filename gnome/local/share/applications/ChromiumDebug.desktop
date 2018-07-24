@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=Debug Chromium
-Exec=chromium --remote-debugging-port=9222
-# --user-data-dir=?
+Exec=chromium --remote-debugging-port=9222 --user-data-dir=~/.config/chromium/debug/
 Icon=chrome
 Terminal=false
 Type=Application
