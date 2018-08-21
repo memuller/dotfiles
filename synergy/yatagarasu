@@ -23,8 +23,11 @@ section: screens
 end
 
 section: aliases
+	yatagarasu:
+		amdo
 	intelbras:
 		lintelbras
+		macdebian
 end
 
 section: links
