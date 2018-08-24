@@ -23,6 +23,7 @@ services:
     external_links:
       - memuller_wp_db_1:memuller
       - wpmudev_db_1:wpmudev
+      - openproject_dev_db_1:openproject
 
 networks:
   default:
