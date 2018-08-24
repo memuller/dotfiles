@@ -7,11 +7,13 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: always
   
   admininastror:
     image: adminer
     ports:
       - "3001:8080"
+    restart: always
     environment:
       ADMINER_DESIGN: pepa-linha
       VIRTUAL_HOST: 'sql.test'
@@ -22,6 +24,7 @@ services:
       - memuller_wp_db_1:memuller
       - wpmudev_db_1:wpmudev
       - redmine_dev_db_1:redmine
+      - openproject_dev_db_1:openproject
 
 networks:
   default:
