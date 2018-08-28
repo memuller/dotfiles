@@ -71,3 +71,9 @@ function dirs() {
 function fixEndings() {
   awk 'BEGIN{RS="^$";ORS="";getline;gsub("\r","");print>ARGV[1]}' $1
 }
+
+# Fetches gitignore file samples from gitignore.io
+function gitignore() {
+  URL="https://www.gitignore.io/api/$1"
+  curl $URL >> .gitignore
+}
