@@ -21,15 +21,16 @@ if [ -f "$HOME/.bin/git-prompt.sh" ]; then
   source ~/.bin/git-prompt.sh
 fi
 
-# RVM
-if [ -d "$HOME/.rvm" ]; then
-  export PATH="$PATH:$HOME/.rvm/bin"
-fi
-
 # NVM
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
+
+# RBENV
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
 fi
 
 # Composer
