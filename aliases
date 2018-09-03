@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# loads PHP composer bins
-if [ -d "$HOME/.composer/bin" ] ; then
-  PATH="$HOME/.composer/bin:$PATH"
-fi
-
 # WP-CLI directory
 PATH=$HOME/.wp-cli/bin:$PATH
 
