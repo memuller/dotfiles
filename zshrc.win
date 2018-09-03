@@ -1,3 +1,4 @@
+#!/bin/zsh
 
 export ZSH=/home/memuller/.oh-my-zsh
 
@@ -17,7 +18,23 @@ BULLETTRAIN_STATUS_EXIT_SHOW=true
 DEFAULT_USER=memuller
 
 # ls ~/.oh-my-zsh/plugins to see available plugins
-plugins=(git)
+plugins=(
+  git
+  autoenv
+  pj
+)
+
+# PJ project paths
+PROJECT_PATHS=(
+  /x/Repos/env
+  /x/Repos/wp
+  /x/Repos/node
+  /x/Repos/ruby
+  /x/Repos/python
+  /x/Repos/wp/mudev/web/app
+)
+
+eval `dircolors ~/Repos/env/dotfiles/dircolors/solarized-dark`
 
 # CASE_SENSITIVE="true"
 
@@ -53,3 +70,5 @@ source $ZSH/oh-my-zsh.sh
 
 # export ARCHFLAGS="-arch x86_64"
 unsetopt prompt_cr prompt_sp
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
