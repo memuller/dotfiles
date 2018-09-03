@@ -6,6 +6,8 @@ gulp-cli
 node-sass  
 vue-cli 
 flow-bin
+typescript
 jake
 parcel-bundler
 webpack-cli
+neovim
