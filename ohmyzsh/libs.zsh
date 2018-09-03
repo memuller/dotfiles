@@ -21,10 +21,10 @@ if [ -f "$HOME/.bin/git-prompt.sh" ]; then
   source ~/.bin/git-prompt.sh
 fi
 
-# NVM
-if [ -d "$HOME/.nvm" ]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Nodenv
+if [ -d "$HOME/.nodenv" ]; then
+  export PATH="$HOME/.nodenv/bin:$PATH"
+  eval "$(nodenv init -)"
 fi
 
 # RBENV
