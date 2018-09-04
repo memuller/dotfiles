@@ -31,6 +31,12 @@ PROJECT_PATHS=(
   /x/Repos/node
   /x/Repos/ruby
   /x/Repos/python
+  /x/Repos/go
+  /x/Repos/electron
+  /x/Repos/php
+  /x/Repos/react
+  /x/Repos/tools
+  /x/Repos/sql
   /x/Repos/wp/mudev/web/app
 )
 
