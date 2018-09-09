@@ -77,3 +77,9 @@ function gitignore() {
   URL="https://www.gitignore.io/api/$1"
   curl $URL >> .gitignore
 }
+
+# Creates an directory, along with a .gitkeep file inside it
+function keep() {
+  mkdir -p $1
+  touch $1/.gitkeep
+}
