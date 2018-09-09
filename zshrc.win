@@ -2,8 +2,10 @@
 
 export ZSH=/home/memuller/.oh-my-zsh
 
-ZSH_THEME="lambda-mod"
-#ZSH_THEME="bullet-train"
+# ZSH_THEME="lambda-mod"
+# ZSH_THEME="refined"
+ZSH_THEME="spaceship-prompt/spaceship"
+# ZSH_THEME="bullet-train"
 BULLETTRAIN_PROMPT_ORDER=(
   status
   context
@@ -14,14 +16,37 @@ BULLETTRAIN_PROMPT_ORDER=(
 )
 BULLETTRAIN_CONTEXT_DEFAULT_USER="memuller"
 BULLETTRAIN_STATUS_EXIT_SHOW=true
-
 DEFAULT_USER=memuller
+
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stampts section
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  package       # Package version
+  node          # Node.js section
+  ruby          # Ruby section
+  golang        # Go section
+  php           # PHP section
+  rust          # Rust section
+  docker        # Docker section
+  venv          # virtualenv section
+  ember         # Ember.js section
+  kubecontext   # Kubectl context section
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
 
 # ls ~/.oh-my-zsh/plugins to see available plugins
 plugins=(
   git
   autoenv
   pj
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # PJ project paths
