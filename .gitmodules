@@ -7,3 +7,6 @@
 [submodule "ohmyzsh/themes/spaceship-prompt"]
 	path = ohmyzsh/themes/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt.git
+[submodule "prezto"]
+	path = prezto
+	url = https://github.com/sorin-ionescu/prezto.git
