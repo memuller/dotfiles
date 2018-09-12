@@ -54,17 +54,8 @@ zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
 
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'vi'
-
 zstyle ':prezto:module:editor' dot-expansion 'yes'
-
 #zstyle ':prezto:module:editor' ps-context 'yes'
-
-#
-# Git
-#
-
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 #
 # GNU Utility
@@ -97,26 +88,23 @@ zstyle ':prezto:module:prompt' theme 'spaceship'
 #zstyle ':prezto:module:prompt' theme 'sorin'
 
 SPACESHIP_PROMPT_ORDER=(
-  time
+  user
+  host
   dir
   git
   package
   node
   ruby
+  rust
   golang
   php
-  rust
-  docker
   venv
-  ember
-  kubecontext
   exec_time
   line_sep
-  vi_mode
-  jobs
   exit_code
   char
 )
+SPACESHIP_GIT_STATUS_SHOW=false
 
 #
 # Autosuggestions
@@ -129,7 +117,7 @@ SPACESHIP_PROMPT_ORDER=(
 
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
-# zstyle ':prezto:module:prompt' show-return-val 'yes'
+zstyle ':prezto:module:prompt' show-return-val 'yes'
 
 zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 zstyle ':prezto:module:ruby:rbenv' auto-switch 'yes'
