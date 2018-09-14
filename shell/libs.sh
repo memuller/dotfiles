@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # adds local sbin/bin directories, if there're there
 if [ -d "/usr/local/bin" ] ; then

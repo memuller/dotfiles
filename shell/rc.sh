@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# loads libs
+source $DOTFILES_PATH/shell/libs.sh
+
 # WP-CLI directory
 PATH=$HOME/.wp-cli/bin:$PATH
 
