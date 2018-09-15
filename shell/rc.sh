@@ -64,6 +64,15 @@ if [ -d "$HOME/Repos/env/vubuntu" ]; then
   source ~/Repos/env/vubuntu/vubuntu.sh
 fi
 
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -x "$(command -v fd)" ]; then
+  export FZF_DEFAULT_COMMAND='fd --type f --follow'
+fi
+
+# Autoenv
+[ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
+
 # ruby is fun
 alias be='bundle exec'
 

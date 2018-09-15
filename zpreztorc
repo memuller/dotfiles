@@ -191,11 +191,3 @@ zstyle ':prezto:module:ruby:rbenv' auto-switch 'yes'
 
 zstyle ':prezto:module:utility' safe-ops 'yes'
 
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -x "$(command -v fd)" ]; then
-  export FZF_DEFAULT_COMMAND='fd --type f --follow'
-fi
-
-# Autoenv
-[ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
