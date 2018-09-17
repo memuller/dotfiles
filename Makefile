@@ -22,3 +22,10 @@ autoenv:
 	cd ${HOME} && \
 	git clone git://github.com/kennethreitz/autoenv.git .autoenv
 
+unlink_dotfiles:
+	cd ~/ && rm -fr .gitconfig .gitignore .zshrc 
+link_configs:
+	ln -s ${PWD}/gitignore ${HOME}/.gitignore
+	ln -s ${PWD}/gitconfig ${HOME}/.gitconfig
+	ln -s ${PWD}/zshrc ${HOME}/.zshrc
+
