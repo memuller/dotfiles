@@ -10,7 +10,7 @@ prezto_link: prezto_unlink
 	ln -s ${RUNCOMS_DIR}/zlogin ${HOME}/.zlogin
 	ln -s ${RUNCOMS_DIR}/zprofile ${HOME}/.zprofile
 	ln -s ${PWD}/prezto ${HOME}/.zprezto
-	ln -s ${PWD}/zpreztorc ${HOME}/.zpreztorc
+	ln -s ${PWD}/shell/zpreztorc ${HOME}/.zpreztorc
 
 prezto_contrib:
 	cd ${HOME} && \
