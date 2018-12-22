@@ -10,6 +10,9 @@ if [ -d "$HOME/.bin" ] ; then
     PATH="$HOME/.bin:$PATH"
 fi
 
+# Adds Chef stuff to path, if exists
+[ -d /opt/chef ] && PATH="/opt/chef/bin:$PATH"
+
 # adds Android SDK to path, if it's there
 if [ -d "$HOME/.android" ] ; then
     PATH="$HOME/.android/tools:$PATH"
@@ -47,3 +50,6 @@ fi
 if [ -d "$HOME/.cargo" ]; then
   export PATH="$PATH:$HOME/.cargo/bin"
 fi
+
+# Loads FZF, if exists
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
