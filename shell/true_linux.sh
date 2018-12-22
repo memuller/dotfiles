@@ -12,7 +12,7 @@ function listen {
     pactl unload-module module-loopback
     export listening=0
   else
-    pact load-module module-loopback
+    pactl load-module module-loopback
     export listening=1
   fi
 }
