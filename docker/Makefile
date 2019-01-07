@@ -1,3 +1,4 @@
+include .env
 
 build:
 	docker-compose down --remove-orphans ;
@@ -5,7 +6,12 @@ build:
 	docker-compose build ;
 
 run:
+	docker-compose up ;
+
+start:
 	docker-compose up --detach ;
 
 stop:
-	docker-compose down ;
+	docker-compose stop ;
+down:
+	docker-compose down;
