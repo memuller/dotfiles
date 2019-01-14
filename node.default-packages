@@ -5,6 +5,8 @@ gulp-cli
 @angular/cli 
 node-sass  
 vue-cli 
+sao
+create-poi-app
 flow-bin
 typescript
 jake
