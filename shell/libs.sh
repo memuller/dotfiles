@@ -50,6 +50,3 @@ fi
 if [ -d "$HOME/.cargo" ]; then
   export PATH="$PATH:$HOME/.cargo/bin"
 fi
-
-# Loads FZF, if exists
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
