@@ -25,6 +25,7 @@ end
 section: aliases
 	yatagarasu:
 		amdo
+    hokkai
 	intelbras:
 		lintelbras
 		macdebian
