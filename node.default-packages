@@ -1,5 +1,6 @@
 standard
 eslint
+tslint
 electron 
 gulp-cli 
 @angular/cli 
