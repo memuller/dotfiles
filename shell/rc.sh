@@ -77,6 +77,9 @@ if [ -x "$(command -v fasd)" ]; then
   fi
   source "$fasd_cache"
   unset fasd_cache
+
+  alias v="f -e vim"
+  alias o="f -e xdg-open"
 fi
 
 # Autoenv
