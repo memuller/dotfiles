@@ -70,8 +70,23 @@ if [ -x "$(command -v fd)" ]; then
   export FZF_DEFAULT_COMMAND='fd --type f --follow'
 fi
 
+if [ -x "$(command -v fasd)" ]; then
+  fasd_cache="$HOME/.fasd-init-cache"
+  if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+    fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-setup zsh-wcomp zsh-wcomp-install >| "$fasd_cache"
+  fi
+  source "$fasd_cache"
+  unset fasd_cache
+fi
+
 # Autoenv
 [ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
+
+# Global aliases
+if [ "$ZSH_VERSION" ]; then
+  alias -g "#null"=">/dev/null"\
+    "#errnull"="1>&2"
+fi
 
 # ruby is fun
 alias be='bundle exec'
