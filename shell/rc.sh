@@ -13,8 +13,9 @@ if [ $? = 1 ]; then
   alias la='ls -A'
   alias l='ls'
 else
+  alias ls="exa --git"
   alias ll='exa -l --git'
-  alias la='exa -a'
+  alias la='exa -a --git'
   alias lf='exa -bgHliS'
   alias l='ll'
 fi
