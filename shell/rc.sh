@@ -49,7 +49,7 @@ if [ `uname -o` = 'GNU/Linux' ]; then
 fi
 
 # some useful commands
-source ~/Repos/env/dotfiles/lib/unix_utils.sh
+source $DOTFILES_PATH/lib/unix_utils.sh
 
 # Windows WSL-specific
 if [ $WSL ]; then
@@ -57,12 +57,12 @@ if [ $WSL ]; then
 fi
 
 
-if [ -d "$HOME/Repos/ruby/danbooru-ruby-grabber" ]; then
-  source ~/Repos/ruby/danbooru-ruby-grabber/aliases
+if [ -d "$REPOS/ruby/danbooru-ruby-grabber" ]; then
+  source $REPOS/ruby/danbooru-ruby-grabber/aliases
 fi
 
-if [ -d "$HOME/Repos/env/vubuntu" ]; then
-  source ~/Repos/env/vubuntu/vubuntu.sh
+if [ -d "$REPOS/env/vubuntu" ]; then
+  source $REPOS/env/vubuntu/vubuntu.sh
 fi
 
 # FZF
