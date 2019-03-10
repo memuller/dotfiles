@@ -17,3 +17,5 @@ function listen {
   fi
 }
 
+# flatpak shortcuts
+alias code="flatpak run com.visualstudio.code.oss"
