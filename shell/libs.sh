@@ -30,6 +30,9 @@ if [ -d "$HOME/.nodenv" ]; then
   eval "$(nodenv init -)"
 fi
 
+# NW.JS
+[ -d "$HOME/.nwjs" ] && export PATH="$HOME/.nwjs:$PATH"
+
 # RBENV
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
