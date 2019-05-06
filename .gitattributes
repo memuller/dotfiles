@@ -1,8 +1,12 @@
 *		text=auto
+
 *.ahk		text eol=crlf
-ConEmu.xml	text eol=crlf
+*ConEmu.xml	text eol=crlf
 conemu/** text eol=crlf
-*.ps1   text eol=crlf
+cmder/** text eol=crlf
+*.ps1 text eol=crlf
+*.cmd text  eol=crlf
+*.bat text eol=crlf
 
 *.sh		text eol=lf
 *.zsh		text eol=lf
