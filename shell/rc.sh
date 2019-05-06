@@ -80,11 +80,20 @@ if [ -x "$(command -v fasd)" ]; then
   unset fasd_cache
 
   alias v="f -e vim"
+  alias vz="z -e vim"
   alias o="f -e xdg-open"
 fi
 
 # Autoenv
 [ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
+
+# Docker/Kubes stuff
+if [ -x "$(command -v kompose)" ]; then
+  source <(kompose completion zsh)
+fi
+if [ -x "$(command -v kubectl)" ]; then
+  source <(kubectl completion zsh)
+fi
 
 # Global aliases
 if [ "$ZSH_VERSION" ]; then
@@ -105,3 +114,4 @@ alias py3='python3'
 
 # docker
 alias dc='docker-compose'
+alias k='kubectl'

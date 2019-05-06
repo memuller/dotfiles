@@ -18,4 +18,4 @@ function listen {
 }
 
 # flatpak shortcuts
-alias code="flatpak run com.visualstudio.code.oss"
+#alias code="flatpak run com.visualstudio.code.oss"

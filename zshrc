@@ -13,3 +13,5 @@ fi
 
 # Loads actual zshrc stuff
 source "$DOTFILES_PATH/shell/rc.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
