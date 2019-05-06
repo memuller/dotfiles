@@ -15,11 +15,15 @@
 #F12::Send {Volume_Up}
 #F10::Send {Volume_Mute}
 
-#F3::Send {LWinDown}{Tab}
+#F3::Send #{Tab}
 
 ;; Apps key (context menu)
 Capslock::AppsKey
 +Capslock::Capslock
+
+;;
+#PgUp::Send ^#{Left}
+#PgDn::Send ^#{Right}
 
 XButton2::WheelUp
 XButton1::WheelDown
