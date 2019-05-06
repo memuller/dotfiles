@@ -85,3 +85,5 @@
   shift = push openshift openshift:master
   theirs = merge --strategy-option theirs
   ours = merge --strategy-option ours
+[cola]
+	spellcheck = false
