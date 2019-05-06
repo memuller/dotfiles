@@ -13,6 +13,9 @@ fi
 # Adds Chef stuff to path, if exists
 [ -d /opt/chef ] && PATH="/opt/chef/bin:$PATH"
 
+# Adds Google Cloud SDK
+[ -d $HOME/.google-cloud-sdk ] && PATH="$HOME/.google-cloud-sdk/bin:$PATH"
+
 # adds Android SDK to path, if it's there
 if [ -d "$HOME/.android" ] ; then
     PATH="$HOME/.android/tools:$PATH"
@@ -37,6 +40,12 @@ fi
 if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
+fi
+
+# PHPENV
+if [ -d "$HOME/.phpenv" ]; then
+  export PATH="$HOME/.phpenv/bin:$PATH"
+  eval "$(phpenv init -)"
 fi
 
 # Composer
