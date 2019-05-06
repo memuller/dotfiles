@@ -1,5 +1,5 @@
 if (! $ENV:DOTFILES_ROOT ) {
-  $ENV:DOTFILES_ROOT = resolve-path( "X:\Repos\env\dotfiles" )
+  $ENV:DOTFILES_ROOT = resolve-path( "C:\Users\memuller\Repos\env\dotfiles" )
 }
 
 $UserProfilePath = Join-Path $env:DOTFILES_ROOT "conemu\user-profile.ps1"
