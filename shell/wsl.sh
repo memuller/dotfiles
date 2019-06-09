@@ -33,3 +33,6 @@ export DISPLAY=:0
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
 export DOCKER_HOST=tcp://0.0.0.0:2375
+
+# Runs host Vagrant
+alias vagrant=vagrant.exe
