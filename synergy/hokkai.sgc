@@ -47,8 +47,8 @@ section: options
 	win32KeepForeground = false
 	switchCorners = none 
 	switchCornerSize = 0
-	keystroke(Super+F10) = switchToScreen(yatagarasu)
-  keystroke(Super+F11) = switchToScreen(intelbras)
-  keystroke(Super+F12) = switchToScreen(duo)
+	keystroke(F13) = switchToScreen(yatagarasu)
+  keystroke(F14) = switchToScreen(intelbras)
+  keystroke(F15) = switchToScreen(duo)
 end
 
