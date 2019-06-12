@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Runs service commands
 # First arg is the command, second is the service name (w/o .service)
@@ -82,6 +82,11 @@ function gitignore() {
 function keep() {
   mkdir -p $1
   touch $1/.gitkeep
+}
+
+# Creates and moves to a dir
+function mkcd() {
+  mkdir -p "$1" && cd "$1"
 }
 
 function dockerClean() {
