@@ -20,6 +20,13 @@ section: screens
 		xtestIsXineramaUnaware = false
 		switchCorners = none 
 		switchCornerSize = 0
+  victoria:
+    halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
 end
 
 section: aliases
@@ -33,22 +40,26 @@ end
 
 section: links
 	yatagarasu:
-		left = intelbras
+		right = intelbras
     down = duo
+    left = victoria
 	intelbras:
-		right = yatagarasu
+		left = yatagarasu
   duo:
     up = yatagarasu
+  victoria:
+    right = yatagarasu
 end
 
 section: options
+  screenSaverSync = true
 	relativeMouseMoves = false
 	screenSaverSync = false
 	win32KeepForeground = false
 	switchCorners = none 
 	switchCornerSize = 0
-	keystroke(F13) = switchToScreen(yatagarasu)
-  keystroke(F14) = switchToScreen(intelbras)
-  keystroke(F15) = switchToScreen(duo)
+	keystroke(Control+F13) = switchToScreen(yatagarasu)
+  keystroke(Control+F14) = switchToScreen(victoria)
+  keystroke(Control+F15) = switchToScreen(duo)
 end
 
