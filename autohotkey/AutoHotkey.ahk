@@ -28,7 +28,7 @@ Capslock::AppsKey
 XButton2::WheelUp
 XButton1::WheelDown
 
-#F13:: Send {PrintScreen}
+;;#F13:: Send {PrintScreen}
 
 #c::
 {
