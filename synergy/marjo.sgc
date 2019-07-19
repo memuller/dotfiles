@@ -1,0 +1,35 @@
+section: screens
+	marjo:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+	victoria:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+end
+
+section: links
+	marjo:
+		left = victoria
+	victoria:
+		right = marjo
+end
+
+section: options
+	screenSaverSync = true
+	relativeMouseMoves = false
+	screenSaverSync = false
+	win32KeepForeground = false
+	switchCorners = none 
+	switchCornerSize = 0
+	keystroke(Control+PageDown) = switchToScreen(marjo)
+	keystroke(Control+PageUp) = switchToScreen(victoria)
+end
+
