@@ -94,7 +94,6 @@ SPACESHIP_PROMPT_ORDER=(
   host
   dir
   git
-  package
   node
   ruby
   rust
@@ -106,7 +105,7 @@ SPACESHIP_PROMPT_ORDER=(
   exit_code
   char
 )
-SPACESHIP_GIT_STATUS_SHOW=false
+SPACESHIP_GIT_STATUS_SHOW=true
 
 #
 # Autosuggestions
