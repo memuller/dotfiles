@@ -33,6 +33,12 @@ if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` ]; then
   export WSL=1
 fi
 
+# Are we on Windows WSL2?
+if [ `uname -r | sed -n 's/.*\( *microsoft-standard *\).*/\1/p'` ]; then
+  export WSL=1
+  export WSL2=1
+fi
+
 # OSX-specific
 if [ `uname` = 'Darwin' ]; then
   source $DOTFILES_PATH/shell/darwin.sh

@@ -28,7 +28,11 @@ alias appearance='lxappearence'
 
 # X Displays
 export LIBGL_ALWAYS_INDIRECT=1
-export DISPLAY=:0
+if [ $WSL2 ]; then
+  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+else
+  export DISPLAY=:0
+fi
 
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
