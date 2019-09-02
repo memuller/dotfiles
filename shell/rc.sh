@@ -42,15 +42,13 @@ fi
 # OSX-specific
 if [ `uname` = 'Darwin' ]; then
   source $DOTFILES_PATH/shell/darwin.sh
-fi
 
 # Linux-specific; only if not WSL
-if [ -z ${WSL} ] && [ `uname -o` = 'GNU/Linux' ]; then
+elif [ -z ${WSL} ] && [ `uname -o` = 'GNU/Linux' ]; then
   source $DOTFILES_PATH/shell/true_linux.sh
-fi
 
 # Linux (including WSL)
-if [ `uname -o` = 'GNU/Linux' ]; then
+elif [ `uname -o` = 'GNU/Linux' ]; then
   source $DOTFILES_PATH/shell/linux.sh
 fi
 
