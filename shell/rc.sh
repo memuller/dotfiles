@@ -3,6 +3,9 @@
 # loads libs
 source $DOTFILES_PATH/shell/libs.sh
 
+# some useful commands
+source $DOTFILES_PATH/lib/unix_utils.sh
+
 # WP-CLI directory
 PATH=$HOME/.wp-cli/bin:$PATH
 
@@ -51,9 +54,6 @@ elif [ -z ${WSL} ] && [ `uname -o` = 'GNU/Linux' ]; then
 elif [ `uname -o` = 'GNU/Linux' ]; then
   source $DOTFILES_PATH/shell/linux.sh
 fi
-
-# some useful commands
-source $DOTFILES_PATH/lib/unix_utils.sh
 
 # Windows WSL-specific
 if [ $WSL ]; then
