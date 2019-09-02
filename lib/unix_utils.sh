@@ -89,6 +89,12 @@ function mkcd() {
   mkdir -p "$1" && cd "$1"
 }
 
+# Checks if a command exists
+# emmits no output and is more reliable than which
+function iscmd() {
+  command -v $1 >/dev/null 2>&1
+}
+
 function dockerClean() {
   docker volume rm $(docker volume ls -qf dangling=true)
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
