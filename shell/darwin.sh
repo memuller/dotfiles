@@ -10,3 +10,6 @@ alias wget="curl -O"
 
 # Loads brew'ed PHP
 [ -d "${BREW_PREFIX}/opt/php" ]  && export PATH="$(brew --prefix php)/bin/php:$PATH"
+
+# Starship theme
+eval "$(starship init zsh)"
