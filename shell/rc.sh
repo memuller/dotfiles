@@ -10,8 +10,7 @@ source $DOTFILES_PATH/lib/unix_utils.sh
 PATH=$HOME/.wp-cli/bin:$PATH
 
 # some more ls aliases; or exa (if installed)
-which exa >/dev/null 2>/dev/null
-if [ $? = 1 ]; then
+if [ "$(iscmd exa)" = 1 ]; then
   alias ll='ls -alF'
   alias la='ls -A'
   alias l='ls'
@@ -71,13 +70,13 @@ fi
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-if [ -x "$(command -v fd)" ]; then
+if [ -x "$(iscmd fd)" ]; then
   export FZF_DEFAULT_COMMAND='fd --type f --follow'
 fi
 
-if [ -x "$(command -v fasd)" ]; then
+if [ -x "$(iscmd fasd)" ]; then
   fasd_cache="$HOME/.fasd-init-cache"
-  if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
+  if [ "$(iscmd fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
     fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-setup zsh-wcomp zsh-wcomp-install >| "$fasd_cache"
   fi
   source "$fasd_cache"
@@ -92,10 +91,10 @@ fi
 [ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
 
 # Docker/Kubes stuff
-if [ -x "$(command -v kompose)" ]; then
+if [ -x "$(iscmd kompose)" ]; then
   source <(kompose completion zsh)
 fi
-if [ -x "$(command -v kubectl)" ]; then
+if [ -x "$(iscmd kubectl)" ]; then
   source <(kubectl completion zsh)
 fi
 

@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Sets $BREW_PREFIX if Homebrew is installed
-command -v brew >/dev/null 2>/dev/null
-if [ $? = 0 ]; then
+if [ "$(iscmd brew)" ]; then
   export BREW_PREFIX="$(brew --prefix)"
 fi 
 
