@@ -16,5 +16,8 @@ if [ $BREW_PREFIX ]; then
   alias zcompinit="zcompinit -u"
 fi
 
+# Loads MySQL CLI tools
+[ -d "/usr/local/mysql" ] && export PATH="/usr/local/mysql/bin:$PATH"
+
 # Starship theme
 eval "$(starship init zsh)"
