@@ -27,8 +27,9 @@ fi
 
 #cl : cd with a ls
 function cl () {
-  cd $1 && l
+  cd $@ && l
 }
+alias c="cl"
 
 # Are we on Windows WSL?
 if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` ]; then
