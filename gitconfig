@@ -64,6 +64,10 @@
   plm = pull origin master
   ps = push
   psm = push origin master
+  plh = pull origin HEAD
+  psh = push origin HEAD
+  pld = pull origin dev
+  psd = push origin dev
   psa = push --all
   df = diff
   lg = log --pretty=oneline
