@@ -61,6 +61,7 @@
   br = branch
   bra = branch -a
   pl = pull
+  plr = pull --rebase
   plm = pull origin master
   ps = push
   psm = push origin master
@@ -70,6 +71,7 @@
   ll = log --stat
   lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
   last = log -1 --stat
+  cp = cherry-pick
   sa = stash apply
   ss = stash
   sc = stash create
