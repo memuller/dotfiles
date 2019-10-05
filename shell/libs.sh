@@ -10,6 +10,8 @@ if [ -d "$HOME/.bin" ] ; then
     PATH="$HOME/.bin:$PATH"
 fi
 
+[ -d $HOME/.local/bin ] && PATH="$HOME/.local/bin:$PATH"
+
 # Adds Chef stuff to path, if exists
 [ -d /opt/chef ] && PATH="/opt/chef/bin:$PATH"
 
