@@ -112,9 +112,11 @@ alias be='bundle exec'
 alias g='git'
 
 #python
-alias py='python'
+alias py='python3'
 alias py2='python2'
 alias py3='python3'
+# alias python='python3'
+# alias pip='pip3'
 
 # docker
 alias dc='docker-compose'
