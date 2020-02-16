@@ -85,7 +85,10 @@
   me = merge
   mem = merge master
   mes = merge --squash
-  re = rebase
+  rb = rebase
+  rbc = rebase --continue
+  rs = reset
+  rsh = reset --hard
   rem = rebase master
   hero = push heroku heroku:master
   shift = push openshift openshift:master
