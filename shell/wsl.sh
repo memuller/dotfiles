@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# when a command is not found, tries to find an executable with the same name and run it
+#when a command is not found, tries to find an executable with the same name and run it
 command_not_found_handle() {
   if cmd.exe /c "(where $1 || (help $1 |findstr /V Try)) >nul 2>nul && ($* || exit 0)"; then
       return $?
@@ -29,14 +29,18 @@ alias appearance='lxappearence'
 # X Displays
 export LIBGL_ALWAYS_INDIRECT=1
 if [ $WSL2 ]; then
-  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+  export WINHOST=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+  export DISPLAY="$WINHOST:0"
 else
   export DISPLAY=:0
 fi
 
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
-export DOCKER_HOST=tcp://0.0.0.0:2375
+#export DOCKER_HOST=tcp://$WINHOST:2375
 
 # Runs host Vagrant
 alias vagrant=vagrant.exe
+# alias docker=docker.exe
+# alias docker-compose=docker-compose.exe
+alias mysqlc="mysql -uroot -p1234 -h$WINHOST"

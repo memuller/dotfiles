@@ -1,0 +1,15 @@
+Host victoria
+  Hostname 192.168.0.3
+  User memuller
+
+Host macdebian
+  Hostname 192.168.0.9
+  User memuller
+
+Host staging.usefabriq.com
+	User ubuntu
+  IdentityFile ~/.ssh/parafa
+
+Host api.usefabriq.com
+	User ubuntu
+	IdentityFile ~/.ssh/parafa
