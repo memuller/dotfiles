@@ -94,3 +94,5 @@
   ours = merge --strategy-option ours
 [cola]
 	spellcheck = false
+[credential]
+	helper = cache --timeout=13600
