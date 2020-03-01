@@ -1,3 +1,6 @@
+Host *
+  ServerAliveInterval 150
+  ServerAliveCountMax 2
 Host victoria
   Hostname 192.168.0.3
   User memuller
