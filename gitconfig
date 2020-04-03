@@ -58,12 +58,15 @@
   co = checkout
   cob = checkout -b
   com = checkout master
+  cod = checkout develop
   br = branch
   bra = branch -a
   pl = pull
   plm = pull origin master
+  pld = pull origin develop
   ps = push
   psm = push origin master
+  psd = push origin develop
   plh = pull origin HEAD
   psh = push origin HEAD
   pld = pull origin dev
