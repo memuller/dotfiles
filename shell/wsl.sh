@@ -37,10 +37,12 @@ fi
 
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
-#export DOCKER_HOST=tcp://$WINHOST:2375
 
 # Runs host Vagrant
 alias vagrant=vagrant.exe
-# alias docker=docker.exe
-# alias docker-compose=docker-compose.exe
 alias mysqlc="mysql -uroot -p1234 -h$WINHOST"
+
+# Starts cron
+sudo /etc/init.d/cron start > /dev/null
+# root crontab * * * * * echo 3 > /proc/sys/vm/drop_caches; touch /root/drop_caches_last_run
+# visudo %sudo ALL=NOPASSWD: /etc/init.d/cron start
