@@ -15,6 +15,7 @@ if [ "$(iscmd exa)" = 1 ]; then
   alias la='ls -A'
   alias l='ls'
 else
+  alias exa="exa --icons"
   alias ls="exa --git"
   alias ll='exa -l --git'
   alias la='exa -a --git'
