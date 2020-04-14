@@ -26,6 +26,12 @@ command_not_found_handler() {
 
 alias appearance='lxappearence'
 
+# Window/tab title
+function precmd() {
+  window_title="\\033]0;${PWD##*/}\\007"
+  echo -ne "$window_title"
+}
+
 # X Displays
 export LIBGL_ALWAYS_INDIRECT=1
 if [ $WSL2 ]; then
