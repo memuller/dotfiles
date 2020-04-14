@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: '"Fira Code", Consolas, monospace',
+    fontFamily: '"Hasklug NF","Fira Code", Consolas, monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -116,7 +116,7 @@ module.exports = {
     bell: 'SOUND',
 
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-    copyOnSelect: false,
+    copyOnSelect: true,
 
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
@@ -147,8 +147,9 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    //'hyper-material-theme'
-    //'verminal'
+    'hyperterm-panda',
+    // 'hyper-night-owl,'
+    'hyperminimal'
   ],
 
   // in development, you can create a directory under
@@ -157,7 +158,20 @@ module.exports = {
   localPlugins: [],
 
   keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
+    "tab:next": [
+      "ctrl+shift+]",
+      "ctrl+shift+right",
+      "ctrl+alt+right",
+      "ctrl+pageup"
+    ],
+    "tab:prev": [
+      "ctrl+shift+[",
+      "ctrl+shift+left",
+      "ctrl+alt+left",
+      "ctrl+pagedown"
+    ],
+    "tab:jump:prefix": "ctrl",
+    "pane:next": "ctrl+tab",
+    "pane:prev": "ctrl+shift+tab",
   },
 };
