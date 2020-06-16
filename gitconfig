@@ -83,6 +83,7 @@
   su = submodule
   suu = submodule update --init
   sua = submodule add
+  cp = cherry-pick
   me = merge
   mem = merge master
   mes = merge --squash

@@ -44,9 +44,9 @@ fi
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
 
-# Runs host Vagrant
-alias vagrant=vagrant.exe
 alias mysqlc="mysql -uroot -p1234 -h$WINHOST"
+
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
 # Starts cron
 sudo /etc/init.d/cron start > /dev/null
