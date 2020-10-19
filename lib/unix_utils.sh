@@ -105,6 +105,11 @@ function dockerClean() {
 }
 
 function pythonClean(){
-  find . -path "*/__pycache__" -type d -exec rm -r {} ';'
-  find . -path "*/*.pyc"  -delete
+  find . -path "*/__pycache__" -type d -exec rm -rf {} ';'
+  find . -path "*/*.pyc"  -exec rm -rf {} ';'
+}
+
+function sudofunc(){
+  FUNC=$(declare -f $1)
+  sudo bash -c "$FUNC; $1"
 }

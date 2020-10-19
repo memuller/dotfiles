@@ -64,3 +64,18 @@ fi
 if [ -d "$HOME/.cargo" ]; then
   export PATH="$PATH:$HOME/.cargo/bin"
 fi
+
+# Virtualenv loading/unloading
+autoload -U add-zsh-hook
+load-virtualenv() {
+    if [ -d "venv" ]; then
+      source ./venv/bin/activate
+    else
+      declare -f deactivate > /dev/null;
+      if [ $? -eq 0 ]; then
+        deactivate
+      fi
+    fi
+}
+add-zsh-hook chpwd load-virtualenv
+load-virtualenv

@@ -58,13 +58,16 @@
   co = checkout
   cob = checkout -b
   com = checkout master
+  cod = checkout develop
   br = branch
   bra = branch -a
   pl = pull
   plr = pull --rebase
   plm = pull origin master
+  pld = pull origin develop
   ps = push
   psm = push origin master
+  psd = push origin develop
   plh = pull origin HEAD
   psh = push origin HEAD
   pld = pull origin dev
@@ -82,6 +85,7 @@
   su = submodule
   suu = submodule update --init
   sua = submodule add
+  cp = cherry-pick
   me = merge
   mem = merge master
   mes = merge --squash
@@ -96,3 +100,5 @@
   ours = merge --strategy-option ours
 [cola]
 	spellcheck = false
+[credential]
+	helper = cache --timeout=13600

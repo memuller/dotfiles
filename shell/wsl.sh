@@ -26,6 +26,12 @@ command_not_found_handler() {
 
 alias appearance='lxappearence'
 
+# Window/tab title
+function precmd() {
+  window_title="\\033]0;${PWD##*/}\\007"
+  echo -ne "$window_title"
+}
+
 # X Displays
 export LIBGL_ALWAYS_INDIRECT=1
 if [ $WSL2 ]; then
@@ -37,10 +43,12 @@ fi
 
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
-#export DOCKER_HOST=tcp://$WINHOST:2375
 
-# Runs host Vagrant
-alias vagrant=vagrant.exe
-# alias docker=docker.exe
-# alias docker-compose=docker-compose.exe
 alias mysqlc="mysql -uroot -p1234 -h$WINHOST"
+
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+
+# Starts cron
+sudo /etc/init.d/cron start > /dev/null
+# root crontab * * * * * echo 3 > /proc/sys/vm/drop_caches; touch /root/drop_caches_last_run
+# visudo %sudo ALL=NOPASSWD: /etc/init.d/cron start
