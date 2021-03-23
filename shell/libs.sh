@@ -65,6 +65,12 @@ if [ -d "$HOME/.cargo" ]; then
   export PATH="$PATH:$HOME/.cargo/bin"
 fi
 
+# FNM
+if [ -d "$HOME/.fnm" ]; then
+  export PATH=/home/memuller/.fnm:$PATH
+  eval "`fnm env`"
+fi
+
 # Virtualenv loading/unloading
 autoload -U add-zsh-hook
 load-virtualenv() {

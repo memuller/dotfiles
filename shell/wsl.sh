@@ -33,13 +33,13 @@ function precmd() {
 }
 
 # X Displays
-export LIBGL_ALWAYS_INDIRECT=1
-if [ $WSL2 ]; then
-  export WINHOST=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
-  export DISPLAY="$WINHOST:0"
-else
-  export DISPLAY=:0
-fi
+# export LIBGL_ALWAYS_INDIRECT=1
+# if [ $WSL2 ]; then
+#   export WINHOST=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}')
+#   export DISPLAY="$WINHOST:0"
+# else
+#   export DISPLAY=:0
+# fi
 
 # Connects to host docker instance
 export COMPOSE_CONVERT_WINDOWS_PATHS=1
@@ -49,6 +49,6 @@ alias mysqlc="mysql -uroot -p1234 -h$WINHOST"
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
 # Starts cron
-sudo /etc/init.d/cron start > /dev/null
+# sudo /etc/init.d/cron start > /dev/null
 # root crontab * * * * * echo 3 > /proc/sys/vm/drop_caches; touch /root/drop_caches_last_run
 # visudo %sudo ALL=NOPASSWD: /etc/init.d/cron start
