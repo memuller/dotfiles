@@ -71,6 +71,10 @@ if [ -d "$HOME/.fnm" ]; then
   eval "`fnm env`"
 fi
 
+# Deno =D
+export DENO_INSTALL="/home/memuller/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Virtualenv loading/unloading
 autoload -U add-zsh-hook
 load-virtualenv() {
