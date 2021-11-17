@@ -29,6 +29,12 @@ if [ -f "$HOME/.bin/git-prompt.sh" ]; then
   source ~/.bin/git-prompt.sh
 fi
 
+# Volta
+if [ -d "$HOME/.volta" ]; then
+  export VOLTA_HOME=$HOME/.volta
+  export PATH="$VOLTA_HOME/bin:$PATH"
+fi
+
 # Nodenv
 if [ -d "$HOME/.nodenv" ]; then
   export PATH="$HOME/.nodenv/bin:$PATH"
