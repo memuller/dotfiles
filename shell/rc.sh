@@ -1,58 +1,65 @@
 #!/bin/bash
 
 # loads libs
-source $DOTFILES_PATH/shell/libs.sh
+# source $DOTFILES_PATH/shell/libs.sh
 
-# some useful commands
-source $DOTFILES_PATH/lib/unix_utils.sh
+# # some useful commands
+# source $DOTFILES_PATH/lib/unix_utils.sh
 
-# WP-CLI directory
-PATH=$HOME/.wp-cli/bin:$PATH
+# # WP-CLI directory
+# PATH=$HOME/.wp-cli/bin:$PATH
 
 # some more ls aliases; or exa (if installed)
-if [ "$(iscmd exa)" = 1 ]; then
-  alias ll='ls -alF'
-  alias la='ls -A'
-  alias l='ls'
-else
+if [ "$(iscmd exa)" = 0 ]; then
   alias exa="exa --icons"
   alias ls="exa --git"
   alias ll='exa -l --git'
   alias la='exa -a --git'
   alias lf='exa -bgHliS'
   alias l='ll'
+elif [ "$(iscmd eza)" = 0 ]; then
+  alias eza="eza --icons"
+  alias ls="eza --git"
+  alias ll='eza -l --git'
+  alias la='eza -a --git'
+  alias lf='eza -bgHliS'
+  alias l='ll'
+else
+  alias ll='ls -alF'
+  alias la='ls -A'
+  alias l='ls'
 fi
 
 #sudo preserves path
 #alias sudo="sudo env PATH=$PATH"
 
 #cl : cd with a ls
-function cl () {
+function cl() {
   cd $@ && l
 }
 alias c="cl"
 
 # Are we on Windows WSL?
-if [ `uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p'` ]; then
+if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/p') ]; then
   export WSL=1
 fi
 
 # Are we on Windows WSL2?
-if [ `uname -r | sed -n 's/.*\( *microsoft-standard *\).*/\1/p'` ]; then
+if [ $(uname -r | sed -n 's/.*\( *microsoft-standard *\).*/\1/p') ]; then
   export WSL=1
   export WSL2=1
 fi
 
 # OSX-specific
-if [ `uname` = 'Darwin' ]; then
+if [ $(uname) = 'Darwin' ]; then
   source $DOTFILES_PATH/shell/darwin.sh
 
 # Linux-specific; only if not WSL
-elif [ -z ${WSL} ] && [ `uname -o` = 'GNU/Linux' ]; then
+elif [ -z ${WSL} ] && [ $(uname -o) = 'GNU/Linux' ]; then
   source $DOTFILES_PATH/shell/true_linux.sh
 
 # Linux (including WSL)
-elif [ `uname -o` = 'GNU/Linux' ]; then
+elif [ $(uname -o) = 'GNU/Linux' ]; then
   source $DOTFILES_PATH/shell/linux.sh
 fi
 
@@ -60,7 +67,6 @@ fi
 if [ $WSL ]; then
   source $DOTFILES_PATH/shell/wsl.sh
 fi
-
 
 if [ -d "$REPOS/ruby/danbooru-ruby-grabber" ]; then
   source $REPOS/ruby/danbooru-ruby-grabber/aliases
@@ -79,7 +85,7 @@ fi
 if [ -x "$(iscmd fasd)" ]; then
   fasd_cache="$HOME/.fasd-init-cache"
   if [ "$(iscmd fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
-    fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-setup zsh-wcomp zsh-wcomp-install >| "$fasd_cache"
+    fasd --init posix-alias zsh-hook zsh-ccomp zsh-ccomp-setup zsh-wcomp zsh-wcomp-install >|"$fasd_cache"
   fi
   source "$fasd_cache"
   unset fasd_cache
@@ -89,25 +95,25 @@ if [ -x "$(iscmd fasd)" ]; then
   alias o="f -e xdg-open"
 fi
 
-# Autoenv
-[ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
+# # Autoenv
+# [ -d ~/.autoenv ] && source ~/.autoenv/activate.sh
 
-# Docker/Kubes stuff
-if [ -x "$(iscmd kompose)" ]; then
-  source <(kompose completion zsh)
-fi
-if [ -x "$(iscmd kubectl)" ]; then
-  source <(kubectl completion zsh)
-fi
+# # Docker/Kubes stuff
+# if [ -x "$(iscmd kompose)" ]; then
+#   source <(kompose completion zsh)
+# fi
+# if [ -x "$(iscmd kubectl)" ]; then
+#   source <(kubectl completion zsh)
+# fi
 
 # Global aliases
-if [ "$ZSH_VERSION" ]; then
-  alias -g "#null"=">/dev/null"\
-    "#errnull"="1>&2"
-fi
+# if [ "$ZSH_VERSION" ]; then
+#   alias -g "#null"=">/dev/null" \
+#     "#errnull"="1>&2"
+# fi
 
-# ruby is fun
-alias be='bundle exec'
+# # ruby is fun
+# alias be='bundle exec'
 
 # git
 alias g='git'
@@ -120,5 +126,6 @@ alias py3='python3'
 # alias pip='pip3'
 
 # docker
-alias dc='docker-compose'
+alias dc='docker'
+alias dcc='docker-compose'
 alias k='kubectl'
