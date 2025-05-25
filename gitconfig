@@ -1,107 +1,107 @@
 [user]
-	name = Matheus E. Muller
-	email = hello@memuller.com
+name = Matheus E. Muller
+email = 56266+memuller@users.noreply.github.com
 
 [core]
-  pager = less -FRSX
-	excludesfile = ~/.gitignore
-	trustctime = false
-  editor = vim
-  filemode = false
-	autocrlf = input
+pager = less -FRSX
+excludesfile = ~/.gitignore
+trustctime = false
+editor = vim
+filemode = false
+autocrlf = input
 
 [color]
-  ui = true
+ui = true
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+current = yellow reverse
+local = yellow
+remote = green
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+meta = yellow bold
+frag = magenta bold
+old = red bold
+new = green bold
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+added = yellow
+changed = green
+untracked = cyan
 
 [push]
-  default = matching
+default = matching
 
 [merge]
-  summary = true
+summary = true
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-  process = git-lfs filter-process
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+required = true
+process = git-lfs filter-process
 
 [alias]
-  unstage = reset HEAD --
-	undo = reset HEAD~1
-  dc = diff --cached
-  a = add
-  aa = add --all
-	st = status
-  s = status -sb
-  cl = clone
-  ci = commit
-  cia = commit -a
-  cim = commit -m
-  ciam = commit -a -m
-  cii = commit --interactive
-  co = checkout
-  cob = checkout -b
-  com = checkout master
-  cod = checkout develop
-  br = branch
-  bra = branch -a
-  pl = pull
-  plr = pull --rebase
-  plm = pull origin master
-  pld = pull origin develop
-  ps = push
-  psm = push origin master
-  psd = push origin develop
-  plh = pull origin HEAD
-  psh = push origin HEAD
-  pld = pull origin dev
-  psd = push origin dev
-  pst = push --tag
-  psa = push --all
-  df = diff
-  lg = log --pretty=oneline
-  ll = log --stat
-  lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
-  last = log -1 --stat
-  cp = cherry-pick
-  sa = stash apply
-  ss = stash
-  sc = stash create
-  su = submodule
-  suu = submodule update --init
-  sua = submodule add
-  cp = cherry-pick
-  me = merge
-  mem = merge master
-  mes = merge --squash
-  rb = rebase
-  rbc = rebase --continue
-  rs = reset
-  rsh = reset --hard
-  rem = rebase master
-  hero = push heroku heroku:master
-  shift = push openshift openshift:master
-  theirs = merge --strategy-option theirs
-  ours = merge --strategy-option ours
-  tags = tag -l --column
-  versions = tag -l --column --sort=-version:refname
+unstage = reset HEAD --
+undo = reset HEAD~1
+dc = diff --cached
+a = add
+aa = add --all
+st = status
+s = status -sb
+cl = clone
+ci = commit
+cia = commit -a
+cim = commit -m
+ciam = commit -a -m
+cii = commit --interactive
+co = checkout
+cob = checkout -b
+com = checkout master
+cod = checkout develop
+br = branch
+bra = branch -a
+pl = pull
+plr = pull --rebase
+plm = pull origin master
+pld = pull origin develop
+ps = push
+psm = push origin master
+psd = push origin develop
+plh = pull origin HEAD
+psh = push origin HEAD
+pld = pull origin dev
+psd = push origin dev
+pst = push --tag
+psa = push --all
+df = diff
+lg = log --pretty=oneline
+ll = log --stat
+lgg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+last = log -1 --stat
+cp = cherry-pick
+sa = stash apply
+ss = stash
+sc = stash create
+su = submodule
+suu = submodule update --init
+sua = submodule add
+cp = cherry-pick
+me = merge
+mem = merge master
+mes = merge --squash
+rb = rebase
+rbc = rebase --continue
+rs = reset
+rsh = reset --hard
+rem = rebase master
+hero = push heroku heroku:master
+shift = push openshift openshift:master
+theirs = merge --strategy-option theirs
+ours = merge --strategy-option ours
+tags = tag -l --column
+versions = tag -l --column --sort=-version:refname
 [cola]
-	spellcheck = false
+spellcheck = false
 [credential]
-	helper = cache --timeout=13600
+helper = cache --timeout=13600
