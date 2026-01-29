@@ -3,6 +3,9 @@ alias dc='docker'
 alias dcc='docker-compose'
 alias k='kubectl'
 
+# Ruby
+alias be="bundle exec"
+
 if type -q eza
     alias eza="eza --icons"
     alias ls="eza --git"
